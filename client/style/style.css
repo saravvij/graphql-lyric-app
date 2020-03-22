@@ -6,3 +6,9 @@
 .material-icons {
     cursor: pointer;
 }
+
+.likes-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

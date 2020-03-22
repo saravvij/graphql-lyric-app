@@ -9,7 +9,10 @@ import SongCreate from "./components/SongCreate";
 import "./style/style.css";
 import SongDetail from "./components/SongDetail";
 
-const client = new ApolloClient({});
+const client = new ApolloClient({
+  dataIdFromObject: o => o.id // For automatic re-render from the response
+  //6523226
+});
 
 const Root = () => {
   return (

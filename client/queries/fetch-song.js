@@ -1,13 +1,15 @@
 import gql from "graphql-tag";
 
 export default gql`
-query Song($id: ID!) {
+  query getSong($id: ID!) {
     song(id: $id) {
+      id
+      title
+      lyrics {
         id
-        title, 
-        lyrics {
-            
-        }
+        likes
+        content
+      }
     }
-}
+  }
 `;
